@@ -127,8 +127,7 @@ update.learner <- function(fit,
                                                  cvControl = fit$cvControl,    
                                                  verbose = verbose, 
                                                  SL.library = fit$meta_learner,
-                                                 family=family,
-                                                 id=fit$id)
+                                                 family=family)
       
       # Extract the fit object from superlearner
       model_stacked <- SL_fit_stacked$fitLibrary[[1]]$object
@@ -181,8 +180,7 @@ update.learner <- function(fit,
                                                 cvControl = fit$cvControl,    
                                                 verbose = verbose, 
                                                 SL.library = list(c(fit$base_learner,fit$base_screener)),
-                                                family=family,
-                                                id=fit$id)
+                                                family=family)
       
       # Extract the fit object from superlearner
       model_concat <- SL_fit_concat$fitLibrary[[1]]$object
