@@ -850,7 +850,7 @@ SL.BART <- function(Y, X, newX, family, obsWeights, id,
                                    num_burn_in = num_burn_in, verbose = verbose,
                                    alpha = alpha, beta = beta, k = k, q = q, nu = nu,
                                    num_iterations_after_burn_in = num_iterations_after_burn_in,
-                                   serialize = serialize,seed=seed)
+                                   serialize = serialize,seed=seed, memcache_for_speed=False)
   # pred returns predicted responses (on the scale of the outcome)
   #pred <- bartMachine:::predict.bartMachine(model, newX)
   pred <- predict(model, newX)
